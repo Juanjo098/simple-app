@@ -17,6 +17,7 @@ deleteProduct.delete('/:id', async (req, res) => {
           {
             projection: {
               productId: '$_id',
+              _id: 0,
               name: 1,
               price: 1,
               stock: 1,
