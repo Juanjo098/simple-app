@@ -6,7 +6,7 @@ const client = new MongoClient(CONNECTION_STRING)
 export async function mongodbClient(callback: (c: MongoClient) => Promise<any>) {
   await client.connect()
 
-  const result = callback(client)
+  const result = await callback(client)
 
   await client.close()
 
