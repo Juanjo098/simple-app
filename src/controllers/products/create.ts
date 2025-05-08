@@ -20,7 +20,7 @@ createProduct.post('/', async (req, res) => {
       return { productId: r.insertedId, ...data }
     })
   
-    res.status(200).json({ productId: result.insertedId.toString() })
+    res.status(200).json(result)
   } catch (err) {
     res.status(500).json({ message: 'Error inesperado' })
   }
