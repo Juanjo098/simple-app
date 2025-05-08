@@ -23,6 +23,7 @@ updateProduct.put('/:id', async (req, res) => {
             returnDocument: 'after',
             projection: {
               productId: '$_id',
+              _id: 0,
               name: 1,
               price: 1,
               stock: 1,
